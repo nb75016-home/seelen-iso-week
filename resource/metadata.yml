@@ -1,4 +1,4 @@
-id: "@nicolas/iso-week-popup"
+id: "@nb75016-home/iso-week-popup"
 metadata:
   displayName: Semaines ISO
   description: Numéro de semaine ISO-8601 et calendrier mensuel du lundi au dimanche.

@@ -31,13 +31,13 @@ test('Toolbar template and popup trigger work in Seelen SandboxJS', () => {
   assert.equal(value,weekLabel(isoWeek(now).week)+' · '+date);
   const click=fs.readFileSync(new URL('../resource/toolbar/onClick.js',import.meta.url),'utf8');
   let target; sandbox.compile(click)({trigger:id=>{target=id;}}).run();
-  assert.equal(target,'@nicolas/iso-week-popup');
+  assert.equal(target,'@nb75016-home/iso-week-popup');
 });
 test('Distributable embeds the widget and its toolbar plugin without local paths', () => {
   const yaml=require('js-yaml');
   const raw=fs.readFileSync(new URL('../bundles/iso-week.yml',import.meta.url),'utf8');
   const widget=yaml.load(raw);
-  assert.equal(widget.id,'@nicolas/iso-week-popup');
+  assert.equal(widget.id,'@nb75016-home/iso-week-popup');
   assert.equal(widget.preset,'Popup'); assert.equal(widget.lazy,true);
   assert.equal(widget.plugins[0].target,'@seelen/fancy-toolbar');
   assert.deepEqual(widget.plugins[0].plugin.scopes,['Date']);

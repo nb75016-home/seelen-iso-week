@@ -14,9 +14,9 @@ Download **iso-week.yml** from [the latest release](https://github.com/nb75016-h
 %APPDATA%\com.seelen.seelen-ui\widgets
 ```
 
-Name the installed file **nicolas-iso-week.yml**, fully quit Seelen and start it again. Add **Semaine ISO** through Fancy Toolbar customization. No administrator privileges, PowerShell script execution or GitHub account are required.
+Name the installed file **seelen-iso-week.yml**, fully quit Seelen and start it again. Add **Semaine ISO** through Fancy Toolbar customization. No administrator privileges, PowerShell script execution or GitHub account are required.
 
-If upgrading the original local version, replace its existing `nicolas-iso-week.yml` file instead of keeping multiple files with the same widget ID. Back up the old file first if you want to retain it. Existing IDs and settings are preserved. Portable installations may use a different data directory.
+**Upgrading from 1.1.0 or the original local version:** resource IDs now use the organization namespace. Remove the old toolbar module, move its previous YAML file out of the widgets directory, and install seelen-iso-week.yml. Restart Seelen and add the module again. Reapply any custom popup settings: settings attached to the previous IDs are not migrated automatically. Keep only one installed copy. Portable installations may use a different data directory.
 
 ## Try for the current session
 
@@ -66,7 +66,7 @@ Seelen creates a dated YAML file in `resource`. Do not commit that dated file: t
 
 ## Compatibility and validation
 
-Targets Seelen stable **2.8.3**, with `@seelen-ui/lib` **2.8.3** and the official `Popup` lifecycle (`Widget.self.init()`, then `ready()`). The plugin targets `@seelen/fancy-toolbar` and opens `@nicolas/iso-week-popup` through `onClickV2/trigger()`.
+Targets Seelen stable **2.8.3**, with `@seelen-ui/lib` **2.8.3** and the official `Popup` lifecycle (`Widget.self.init()`, then `ready()`). The plugin targets `@seelen/fancy-toolbar` and opens `@nb75016-home/iso-week-popup` through `onClickV2/trigger()`.
 
 Tests cover ISO year boundaries, week 53, leap years and monthly calendars from 1990 through 2040. Tests also execute the toolbar scripts in SandboxJS 0.9.7 and inspect the standalone resource.
 
@@ -74,7 +74,7 @@ The original modules were loaded successfully in the user's Seelen installation.
 
 ## Uninstall
 
-Remove the toolbar module, delete only `nicolas-iso-week.yml` from the user widgets directory and restart Seelen. For temporary loads, use `slu resource unload widget` with the same path used to load it.
+Remove the toolbar module, delete only `seelen-iso-week.yml` from the user widgets directory and restart Seelen. For temporary loads, use `slu resource unload widget` with the same path used to load it.
 
 ## Related project
 

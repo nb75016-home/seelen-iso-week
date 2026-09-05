@@ -1,1 +1,1 @@
-trigger("@nicolas/iso-week-popup");
+trigger("@nb75016-home/iso-week-popup");

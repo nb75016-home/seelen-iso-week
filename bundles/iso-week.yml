@@ -1,4 +1,4 @@
-id: '@nicolas/iso-week-popup'
+id: '@nb75016-home/iso-week-popup'
 metadata:
   displayName: Semaines ISO
   description: Numéro de semaine ISO-8601 et calendrier mensuel du lundi au dimanche.
@@ -110,7 +110,7 @@ css: |
   .clock-value { text-align: right; font-variant-numeric: tabular-nums; }
   .clock-value time { font-size: 20px; font-weight: 600; white-space: nowrap; }
 plugins:
-  - id: '@nicolas/tb-iso-week'
+  - id: '@nb75016-home/tb-iso-week'
     metadata:
       displayName: Semaine ISO
       description: Ouvrir le calendrier avec numéros de semaine ISO.
@@ -143,4 +143,4 @@ plugins:
         const now = new Date();
         const civilDate = String(now.getDate()).padStart(2, "0") + "/" + String(now.getMonth() + 1).padStart(2, "0") + "/" + now.getFullYear();
         return weekLabel(isoWeek(now).week, "Sxx") + " · " + civilDate;
-      onClickV2: trigger("@nicolas/iso-week-popup");
+      onClickV2: trigger("@nb75016-home/iso-week-popup");
