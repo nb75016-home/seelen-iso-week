@@ -1,0 +1,39 @@
+id: "@nicolas/iso-week-popup"
+metadata:
+  displayName: Semaines ISO
+  description: Numéro de semaine ISO-8601 et calendrier mensuel du lundi au dimanche.
+  tags:
+    - toolbar
+    - clock
+    - calendar
+  appTargetVersion:
+    - 2
+    - 8
+    - 3
+icon: FaCalendar
+preset: Popup
+instances: Single
+lazy: true
+settings:
+  - type: select
+    key: week-format
+    label: Format des semaines dans le popup
+    defaultValue: Sxx
+    options:
+      - value: Sxx
+        label: Sxx
+      - value: Sx
+        label: Sx
+      - value: Wxx
+        label: Wxx
+      - value: Wx
+        label: Wx
+  - type: switch
+    key: show-date
+    label: Afficher la date complète
+    defaultValue: true
+html: !include index.html
+js: !include index.js
+css: !include index.css
+plugins:
+  - !extend toolbar/metadata.yml

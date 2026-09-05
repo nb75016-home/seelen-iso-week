@@ -1,0 +1,23 @@
+{
+  "name": "seelen-iso-week",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@seelen-ui/lib": "2.8.3"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "js-yaml": "4.3.1",
+    "@nyariv/sandboxjs": "0.9.7"
+  },
+  "license": "AGPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nb75016-home/seelen-iso-week.git"
+  }
+}

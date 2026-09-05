@@ -1,0 +1,20 @@
+id: "@nicolas/tb-iso-week"
+metadata:
+  displayName: Semaine ISO
+  description: Ouvrir le calendrier avec numéros de semaine ISO.
+  tags:
+    - toolbar
+    - clock
+    - calendar
+  appTargetVersion:
+    - 2
+    - 8
+    - 3
+icon: FaCalendar
+target: "@seelen/fancy-toolbar"
+plugin:
+  scopes:
+    - Date
+  tooltip: return "Semaine ISO · ouvrir le calendrier";
+  template: !include template.js
+  onClickV2: !include onClick.js
